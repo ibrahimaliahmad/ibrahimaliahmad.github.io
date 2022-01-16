@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <script src="https://unpkg.com/@esri/arcgis-rest-request@2.0.3/dist/umd/request.umd.js"></script>
+    <script src="https://unpkg.com/@esri/arcgis-rest-feature-layer@2.0.3/dist/umd/feature-layer.umd.js"></script>
+    <head>
+        <title>Countries App</title>
+        <style type="text/css">
+            html {
+                overflow: auto;
+            }
+            
+            html,
+            body,
+            div,
+            iframe {
+                margin: 0px;
+                padding: 0px;
+                height: 100%;
+                border: none;
+            }
+            iframe {
+                display: block;
+                width: 100%;
+                border: none;
+                overflow-y: auto;
+                overflow-x: hidden;
+            }
+        </style>
+    </head>
+    <body>
+        <iframe id="frame" frameborder="0" marginheight="0" marginwidth="0" width="100%" height="100%" scrolling="auto"></iframe>
+        <script>
+            console.log(document.URL);
+            console.log(document.location);
+            console.log(document.baseURI);
+            console.log(document.all);
+            console.log(document.location.search);
+            console.log(document.location.href);
+            console.log(location.search);
+            var queryString = top.location.search;
+            var urlParams = new URLSearchParams(queryString);
+            var isoParam = urlParams.get('iso') !== null ? urlParams.get('iso') : "AFG";
+            console.log(isoParam);
+            var request = new XMLHttpRequest();
+            request.open('GET', `https://services5.arcgis.com/sjP4Ugu5s0dZWLjd/ArcGIS/rest/services/HubCountriesApp/FeatureServer/0/query?where=iso+%3D+%27${isoParam}%27&objectIds=&time=&geometry=&geometryType=esriGeometryEnvelope&inSR=&spatialRel=esriSpatialRelIntersects&resultType=none&distance=0.0&units=esriSRUnit_Meter&returnGeodetic=false&outFields=customSortOrder&returnGeometry=false&featureEncoding=esriDefault&multipatchOption=xyFootprint&maxAllowableOffset=&geometryPrecision=&outSR=&datumTransformation=&applyVCSProjection=false&returnIdsOnly=false&returnUniqueIdsOnly=false&returnCountOnly=false&returnExtentOnly=false&returnQueryGeometry=false&returnDistinctValues=false&cacheHint=false&orderByFields=&groupByFieldsForStatistics=&outStatistics=&having=&resultOffset=&resultRecordCount=&returnZ=false&returnM=false&returnExceededLimitFeatures=true&quantizationParameters=&sqlFormat=none&f=pjson`, true);
+            request.onload = function () {
+                var data = JSON.parse(this.response);
+                if (request.status >= 200 && request.status < 400) {
+                    var url = `https://9hsein5.github.io/FAO.io/countries?index=${data.features[0].attributes.customSortOrder}`;
+                    document.getElementById("frame").src = url;
+                } else {
+                    var url = `https://9hsein5.github.io/FAO.io/countries?index=1`;
+                    document.getElementById("frame").src = url;
+                }
+            }
+            request.send();
+        </script>
+    </body>
+</html>

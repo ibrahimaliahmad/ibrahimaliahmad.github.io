@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<style>
+a:link {
+  color: rgb(0, 94, 149);
+  background-color: transparent;
+  text-decoration: none;
+}
+a:visited {
+  color: #005e95;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: #005e95;
+  background-color: transparent;
+  text-decoration: underline;
+}
+a:active {
+  color: #005e95;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+</head>
+  <body>
+    <table border="0" cellpadding="1" cellspacing="1" style="background-color:#ffffff; width:400px">
+      <tbody>
+        <tr>
+          <td>&nbsp;
+          <div>
+          <div style="padding:10px">
+          <div>
+          <div>
+          <div>
+          <div>
+          <div style="color:#4c4c4c"><strong>Go to the source</strong></div>
+          <div>
+          <div style="border:0px solid var(--light-300)">
+          <div>
+          <div>
+          <div>
+          <div>
+          <div>
+          <div>
+          <p><span style="font-size:25px"><a id="m_encodeFilter" href="" style="font-size:25px;" target="_blank">Survey data</a> &nbsp;<a id="a_encodeFilter" href="" style="font-size:25px;" target="_blank">Aggregated data</a></span></p>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <script type="text/javascript">
+    var queryString = window.location.search;
+    var urlParams = new URLSearchParams(queryString);
+    var filter = `{\"round\":[${parseInt(urlParams.get('round'))},${parseInt(urlParams.get('round'))}],\"adm0_iso3\":[\"${urlParams.get('iso')}\"]}`;
+    var filter_enc = encodeURIComponent(window.btoa(filter));
+    var m_item_id = urlParams.get('m_item_id');
+    var a_item_id = urlParams.get('a_item_id');
+    var m_url = `https://data-in-emergencies.fao.org/datasets/${m_item_id}/explore?filters=${filter_enc}`;
+    document.getElementById("m_encodeFilter").href = m_url;
+    var a_url = `https://data-in-emergencies.fao.org/datasets/${a_item_id}/explore?filters=${filter_enc}`;
+    document.getElementById("a_encodeFilter").href = a_url;
+    if(m_item_id == null ||  m_item_id == "") {
+      document.getElementById("m_encodeFilter").remove();
+    }
+    if(a_item_id == null ||  a_item_id == "") {
+      document.getElementById("a_encodeFilter").remove();
+    }
+    </script>
+  </body>
+</html>
