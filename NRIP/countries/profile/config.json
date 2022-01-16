@@ -1,0 +1,25 @@
+{
+    "portalUrl": "https://undrr.maps.arcgis.com/",
+    "sharePath": "https://nrip-undrr.opendata.arcgis.com",
+    "iso": "AFG",
+    "showAllPath": "https://undrr.maps.arcgis.com/apps/instant/filtergallery/index.html?appid=d48de8b4c0ff497c8308e336d3e44808&categories=%2Fcategories%2Fcountries%2F{iso}",
+    "groupId": "9554a23eebb344fb909cd7f00c933355",
+    "infoSource": "https://services5.arcgis.com/NH6r1LZCjFv2ufdI/arcgis/rest/services/COUNTRIES_TOUR/FeatureServer/0",
+    "isoField": "iso",
+    "fields": {
+        "image": "bg_url",
+        "name": "name",
+        "text": "long_description",
+        "calendarimg": "crop_calendar",
+        "stat1": "stat1",
+        "stat1subtitle": "stat1_desc",
+        "stat2": "stat2",
+        "stat2subtitle": "stat2_desc",
+        "stat3": "stat3",
+        "stat3subtitle": "stat3_desc",
+        "stat4": "stat4",
+        "stat4subtitle": "stat4_desc"
+    },
+    "countryNotFoundMsg": "Country not found",
+    "maxResultCount": 6
+}
