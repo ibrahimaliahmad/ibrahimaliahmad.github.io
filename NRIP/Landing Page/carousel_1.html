@@ -1,5 +1,6 @@
 <div class=container>
     <div class=Rectangle></div>
+    <div class="clearfix"></div>
     <img src="https://undrr.maps.arcgis.com/sharing/rest/content/items/ed5787b884cd4451962290ce8006afca/data" alt="Costa Rica Market" style="width: 100%;">
     <div class="text-block">
         <h4 class="title">What is NRIP? How can it help my community?</h4>
@@ -9,6 +10,7 @@
         <p class="paragraph"><br></p>
         <p class="paragraph"><br></p>    
     </div>
+    </div>
 </div>
 
 <style>
@@ -17,7 +19,11 @@
     width: 100vw;
     font-family: Arial;
     }
-    
+    .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
+    }
     .text-block {
     position: absolute;
     top: 100px;

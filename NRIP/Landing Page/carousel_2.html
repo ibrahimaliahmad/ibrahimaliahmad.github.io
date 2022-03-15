@@ -1,5 +1,6 @@
 <div class=container>
     <div class=Rectangle></div>
+    <div class="clearfix"></div>
     <img src="https://undrr.maps.arcgis.com/sharing/rest/content/items/1eb08296188e4084897285cd9bc7cf0e/data" alt="nature" style="width: 100%;">
     <div class="text-block">
         <h4 class="title">NRIP: Coverage and Data</h4>
@@ -7,7 +8,7 @@
         <p class="paragraph">To support better access to and sharing of risk information, NRIP draws from multiple sources to provide the best available risk, hazard, exposure, vulnerability, loss and damage, and climate data. NRIP draws risk information that is high quality, reliable, and authoritative from government and UN sources, as well as global, regional, and third-party organizations.  </p>
         <p class="paragraph"><br></p>
         <p class="paragraph"><br></p>
-
+    </div>
     </div>
 </div>
 
@@ -16,6 +17,11 @@
     position: relative;
     width: 100vw;
     font-family: Arial;
+    }
+    .clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
     }
     .text-block {
     position: absolute;
