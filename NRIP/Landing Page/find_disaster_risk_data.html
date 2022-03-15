@@ -1,12 +1,55 @@
-<div class=container>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+<div class="flex-container">
     <div>
-        <h4 class="title">Find the right disaster risk data</h4>
+        <div class="title">
+            <h4 class="title">Find the right disaster risk data</h4>
+        </div>
+        <div class=Rectangle></div>
     </div>
-    <div class=Rectangle></div>
+
+    <div>
+        <div class="subtitle">
+            <h4 class="subtitle">Overviews of NRIP countries</h4>
+        </div>
+        <div class="paragraph">
+            <p class="paragraph"><br>Country name 1 (2.3 MB)</p>
+            <p class="paragraph">Country name 2 (1.1 MB)</p>
+            <p class="paragraph">Country name 3 (38 KB)</p>
+        </div>
+    </div>
+
+    <div>
+        <div class="subtitle">
+            <h4 class="subtitle">Search data set listings</h4>
+        </div>
+        <div class="paragraph">
+            <p class="paragraph"><br>Country name</p>
+            <p class="paragraph">Country name</p>
+            <p class="paragraph">Country name</p>
+        </div>
+    </div>
+
 </div>
 
 
+
 <style>
+    .flex-container {
+    display: flex;
+    height: 200px;
+    align-items: flex-start;
+    background-color: transparent;
+    }
+    .flex-container > div {
+    width: 100%;
+    margin: 10px;
+    line-height: 75px;
+    font-size: 30px;
+    }
     .container {
     position: relative;
     width: 100vw;
@@ -22,6 +65,8 @@
     padding-right: 20px;
     }
     .title {
+    width: 379px;
+    height: 108px;
     font-family: Roboto;
     font-size: 40px;
     font-weight: bold;
@@ -31,21 +76,32 @@
     letter-spacing: normal;
     color: #000;
     }
-    .paragraph {
+    .subtitle{
+    width: 334px;
+    height: 24px;
     font-family: Roboto;
-    font-size: 16px;
+    font-size: 26px;
+    font-weight: bold;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 0.92;
+    letter-spacing: normal;
+    color: #000;
+    }
+    .paragraph {
+    margin: 0 63px 0 0;
+    font-family: Roboto;
+    font-size: 20px;
     font-weight: normal;
     font-stretch: normal;
     font-style: normal;
-    line-height: 1.5;
+    line-height: 1.6;
     letter-spacing: normal;
-    color: #fff;
+    color: #000;
     }
     .Rectangle {
-    margin-left: auto;
-    margin-right: auto;
-    width: 1177px;
-    height: 26px;
-    background-color: #d22b40;
+    width: 108px;
+    height: 24px;
+    background-color: #eb752a;
     }
 </style>
