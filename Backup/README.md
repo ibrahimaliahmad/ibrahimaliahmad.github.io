@@ -1,2 +1,0 @@
-# ibrahimaliahmad.github.io
-# NRIP

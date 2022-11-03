@@ -1,9 +1,0 @@
-{
-    "portalUrl": "https://hqfao.maps.arcgis.com/",
-    "defaultItem": "0233d35f5f3a4208b20194198c0bfa66",
-    "hublUrl": "https://data-in-emergencies.fao.org",
-    "sharePath": "https://data-in-emergencies.fao.org/maps/{id}/explore",
-    "groupId": "a76262e9167148539f69ebea657f5456",
-    "shareMsg": "I was exploring FAO Data in Emergencies Hub and found a map I wanted to share with you that might support your policy and legislative research:%0D{link}",
-    "title": "FAO Data in Emergencies Hub | {maptitle}"
-}
